@@ -4,6 +4,22 @@ import { motion, Variants } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
 import { PROJECTS } from './projects'
 
+// Impulse particles
+interface Impulse {
+  x: number
+  y: number
+  baseX: number
+  baseY: number
+  radius: number
+  alpha: number
+  fadeSpeed: number
+  maxAlpha: number
+  color: string
+  vibrationSpeed: number
+  vibrationAmount: number
+  phase: number
+}
+
 // --- ANIMATION VARIANTS ---
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -46,22 +62,6 @@ function NeuralImpulses() {
     resize()
     window.addEventListener('resize', resize)
 
-    // Impulse particles
-    interface Impulse {
-      x: number
-      y: number
-      baseX: number
-      baseY: number
-      radius: number
-      alpha: number
-      fadeSpeed: number
-      maxAlpha: number
-      color: string
-      vibrationSpeed: number
-      vibrationAmount: number
-      phase: number
-    }
-
     const impulses: Impulse[] = []
     const colors = ['#7c3aed', '#6366f1', '#8b5cf6', '#a78bfa']
 
@@ -74,10 +74,10 @@ function NeuralImpulses() {
         y,
         baseX: x,
         baseY: y,
-        radius: Math.random() * 20 + 15, // Smaller: 15-35px
+        radius: Math.random() * 30 + 15, // Smaller: 15-35px
         alpha: 0,
         fadeSpeed: Math.random() * 0.006 + 0.003,
-        maxAlpha: Math.random() * 0.12 + 0.04,
+        maxAlpha: Math.random() * 0.16 + 0.04,
         color: colors[Math.floor(Math.random() * colors.length)],
         vibrationSpeed: Math.random() * 0.08 + 0.03,
         vibrationAmount: Math.random() * 3 + 1,
@@ -167,29 +167,22 @@ export default function Home() {
         initial="hidden"
         animate="show"
         className="relative z-10 min-h-screen bg-transparent text-[#E0E0E0] font-sans selection:bg-white selection:text-black flex flex-col">
+        {/* Cluster Logo */}
+        <div className="absolute top-8 left-8 md:top-16 md:left-16 flex items-center gap-4 mb-8">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-white">
+            <rect x="2.5" y="2.5" width="19" height="19" stroke="currentColor" strokeWidth="1.5" />
+            <circle cx="12" cy="12" r="4" fill="currentColor" />
+            <rect x="1" y="1" width="4" height="4" fill="#050505" />
+          </svg>
+          <span className="text-[10px] font-mono tracking-[0.4em] uppercase text-gray-500">
+            Cluster 127
+          </span>
+        </div>
+
         {/* MAIN CONTENT - pushes footer down */}
         <main className="flex-1 flex flex-col justify-end px-8 md:px-16 pb-8">
           {/* HERO - Left Bottom */}
-          <motion.section variants={itemVariants} className="mb-12">
-            {/* Cluster Logo */}
-            <div className="flex items-center gap-4 mb-8">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-white">
-                <rect
-                  x="2.5"
-                  y="2.5"
-                  width="19"
-                  height="19"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                />
-                <circle cx="12" cy="12" r="4" fill="currentColor" />
-                <rect x="1" y="1" width="4" height="4" fill="#050505" />
-              </svg>
-              <span className="text-[10px] font-mono tracking-[0.4em] uppercase text-gray-500">
-                Cluster 127
-              </span>
-            </div>
-
+          <motion.section variants={itemVariants} className="mb-24">
             {/* Manifesto */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-white leading-tight mb-4">
               Synthetic Biology

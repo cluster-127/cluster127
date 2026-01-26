@@ -2,8 +2,8 @@
 
 @theme {
   /* Renk Paletimiz */
-  --color-void: #050505;
-  --color-cluster: #7c3aed;
+  --color-void: #060606;
+  --color-cluster: #0e00ec;
 
   /* Font Ayarları (Next.js font değişkenlerine hook atıyoruz) */
   --font-grotesk: var(--font-geist-sans), sans-serif;
