@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Cluster 127 | Cortex',
+  title: 'Cluster 127',
   description: 'Architecting synthetic consciousness.',
 }
 
