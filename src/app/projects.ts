@@ -15,7 +15,7 @@ export const PROJECTS = [
     type: 'Cognitive Substrate',
     desc: 'Physics engine for synthetic cognition.',
     tags: ['TypeScript', 'Hebbian', 'Phase Graph'],
-    link: 'https://github.com/cluster-127/nabu',
+    link: 'https://github.com/cluster-127/nabu-how',
   },
   {
     id: 'mindfry',
