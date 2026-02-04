@@ -37,7 +37,7 @@ export default function About() {
           About Us
         </h1>
 
-        <div className="space-y-6 text-stone-400 text-lg leading-relaxed">
+        <div className="space-y-6 text-white/50 text-lg leading-relaxed">
           <p>
             <span className="text-white font-medium">Cluster 127</span> is a research-driven
             organization dedicated to building cognitive infrastructure for the next generation of
@@ -46,7 +46,7 @@ export default function About() {
 
           <p>
             We believe that true machine intelligence requires more than algorithms—it demands a{' '}
-            <span className="text-stone-200">biological understanding</span> of how information
+            <span className="text-white/50">biological understanding</span> of how information
             lives, evolves, and dies within systems.
           </p>
 
@@ -59,12 +59,12 @@ export default function About() {
       </motion.section>
 
       <motion.section variants={itemVariants} className="mb-16">
-        <h2 className="text-2xl font-light tracking-tight text-stone-500 mb-6">Our Philosophy</h2>
+        <h2 className="text-2xl font-light tracking-tight text-white/50 mb-6">Our Philosophy</h2>
 
         <div className="grid gap-6 md:grid-cols-2">
           <div className="border border-white/10 p-6 hover:border-white/20 transition-colors">
             <h3 className="text-white font-medium mb-2">Determinism Over Chaos</h3>
-            <p className="text-stone-500 text-sm">
+            <p className="text-white/50 text-sm">
               Every behavior is predictable. Every state is recoverable. We build systems that can
               explain themselves.
             </p>
@@ -72,7 +72,7 @@ export default function About() {
 
           <div className="border border-white/10 p-6 hover:border-white/20 transition-colors">
             <h3 className="text-white font-medium mb-2">Biology as Blueprint</h3>
-            <p className="text-stone-500 text-sm">
+            <p className="text-white/50 text-sm">
               Information isn&apos;t static data—it&apos;s living tissue that grows, decays, and
               regenerates based on cognitive pressure.
             </p>
@@ -80,7 +80,7 @@ export default function About() {
 
           <div className="border border-white/10 p-6 hover:border-white/20 transition-colors">
             <h3 className="text-white font-medium mb-2">Physics, Not Magic</h3>
-            <p className="text-stone-500 text-sm">
+            <p className="text-white/50 text-sm">
               We reject black-box solutions. Our systems operate on transparent, mathematical
               principles.
             </p>
@@ -88,7 +88,7 @@ export default function About() {
 
           <div className="border border-white/10 p-6 hover:border-white/20 transition-colors">
             <h3 className="text-white font-medium mb-2">Resilience First</h3>
-            <p className="text-stone-500 text-sm">
+            <p className="text-white/50 text-sm">
               Systems must survive chaos. We engineer for failure, recovery, and graceful
               degradation.
             </p>
