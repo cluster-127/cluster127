@@ -21,12 +21,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${sans.variable} antialiased bg-void`}>
-        <div className="relative min-h-screen flex flex-col text-white font-sans selection:bg-white selection:text-black">
-          <Header />
-          <main className="flex-1 flex flex-col justify-end">{children}</main>
-          <Footer />
-        </div>
+      <body
+        className={`${sans.variable} antialiased bg-void relative min-h-screen flex flex-col text-white font-sans selection:bg-white selection:text-black`}>
+        <Header />
+        {children}
+        <Footer />
       </body>
     </html>
   )

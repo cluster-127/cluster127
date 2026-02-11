@@ -2,7 +2,6 @@
 
 import { motion, Variants } from 'framer-motion'
 import FloatingLines from './components/floating-lines'
-import { PROJECTS } from './projects'
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -29,40 +28,29 @@ const itemVariants: Variants = {
 
 export default function Home() {
   return (
-    <>
-      <motion.div
+    <main className="flex-1 flex flex-col justify-end">
+      <motion.section
         variants={containerVariants}
         initial="hidden"
         animate="show"
-        className="relative z-10 flex flex-col gap-6 md:gap-12  pointer-events-none select-none">
-        <motion.section variants={itemVariants} className="px-8 md:px-16">
-          {/* Manifesto */}
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-light text-white/50 leading-tight mb-4 text-center md:text-left">
-            We give machines
-            <br />
-            <span className="text-white"> the wisdom to feel.</span>
-          </h1>
+        className="relative z-10 flex flex-col gap-6 md:gap-12 p-8 md:p-16 pointer-events-none select-none">
+        <h1 className="text-4xl md:text-5xl lg:text-7xl font-light text-white/50 leading-tight text-center md:text-left">
+          We give machines
+          <br />
+          <span className="text-white"> the wisdom to feel.</span>
+        </h1>
 
+        <div className="flex flex-col gap-2 md:max-w-3xl">
           <p className="text-lg md:text-xl font-light text-white/50 leading-relaxed tracking-wider text-center md:text-left w-full md:w-fit">
             Information is not data, information is living, dying, feeling data.
           </p>
-        </motion.section>
-
-        <motion.nav
-          variants={itemVariants}
-          className="flex flex-wrap justify-center md:justify-start gap-12 py-6 px-8 md:py-12 md:px-16">
-          {PROJECTS.map((project) => (
-            <div
-              key={project.id}
-              className="group relative flex flex-col text-md md:text-base text-white/80 cursor-default">
-              <span className="tracking-wide">{project.name}</span>
-              <span className="text-xs font-sans text-white/50 whitespace-nowrap hidden md:inline-flex">
-                {project.type}
-              </span>
-            </div>
-          ))}
-        </motion.nav>
-      </motion.div>
+          <p className="text-base md:text-lg font-light text-white/40 leading-relaxed tracking-wider text-center md:text-left w-full md:w-fit">
+            We build deterministic physics engines for distributed systems. <br />
+            Our stack models software as living organisms — with reflexes, memory, and the wisdom to
+            forget.
+          </p>
+        </div>
+      </motion.section>
 
       <FloatingLines
         enabledWaves={['top', 'middle', 'bottom']}
@@ -74,6 +62,6 @@ export default function Home() {
         interactive={false}
         parallax={true}
       />
-    </>
+    </main>
   )
 }
