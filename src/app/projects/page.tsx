@@ -55,7 +55,9 @@ export default function Projects() {
       </motion.section>
 
       <motion.section variants={itemVariants} className="mb-16">
-        <h2 className="text-2xl font-light tracking-tight text-white/50 mb-6">Our Experiments</h2>
+        <h2 className="text-2xl font-light tracking-tight text-white/50 mb-6">
+          Research &amp; Development
+        </h2>
 
         <div className="grid gap-6 md:grid-cols-3">
           {projects.experiments.map((project) => (
@@ -80,10 +82,39 @@ export default function Projects() {
       </motion.section>
 
       <motion.section variants={itemVariants} className="mb-16">
-        <h2 className="text-2xl font-light tracking-tight text-white/50 mb-6">Our Products</h2>
+        <h2 className="text-2xl font-light tracking-tight text-white/50 mb-6">
+          Commercial Products
+        </h2>
 
         <div className="grid gap-6 md:grid-cols-3">
           {projects.products.map((project) => (
+            <a
+              key={project.id}
+              href={project.link}
+              target="_blank"
+              className="relative overflow-hidden border border-white/10 py-6 pl-10 pr-6 hover:border-white/20 transition-colors">
+              <figure className="absolute -left-1.5 -top-3 text-7xl font-light text-white/10">
+                {project.number}
+              </figure>
+              <aside className="flex flex-col gap-1">
+                <h3 className="text-white font-medium mb-2">{project.name}</h3>
+                <p className="text-white/50 text-sm">{project.description}</p>
+                <span className="absolute top-2 right-2 px-2 py-1 text-xs text-white/40 bg-white/5 rounded-sm">
+                  {project.type}
+                </span>
+              </aside>
+            </a>
+          ))}
+        </div>
+      </motion.section>
+
+      <motion.section variants={itemVariants} className="mb-16">
+        <h2 className="text-2xl font-light tracking-tight text-white/50 mb-6">
+          Open Source Softwares
+        </h2>
+
+        <div className="grid gap-6 md:grid-cols-3">
+          {projects.oss.map((project) => (
             <a
               key={project.id}
               href={project.link}
