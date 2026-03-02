@@ -31,8 +31,8 @@ export default function Contact() {
       variants={containerVariants}
       initial="hidden"
       animate="show"
-      className="relative z-10 flex-1 flex flex-col px-8 md:px-16 pt-32 pb-16 max-w-6xl">
-      <motion.section variants={itemVariants} className="mb-16">
+      className="relative z-10 flex-1 flex flex-col px-8 md:px-16 pt-32 pb-16">
+      <motion.section variants={itemVariants} className="mb-16 max-w-4xl">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-white leading-tight mb-8">
           Contact Us
         </h1>

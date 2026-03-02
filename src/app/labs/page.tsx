@@ -35,8 +35,8 @@ export default function Labs() {
       variants={containerVariants}
       initial="hidden"
       animate="show"
-      className="relative z-10 flex-1 flex flex-col px-8 md:px-16 pt-32 pb-16 max-w-7xl">
-      <motion.section variants={itemVariants} className="mb-16 max-w-3xl">
+      className="relative z-10 flex-1 flex flex-col px-8 md:px-16 pt-32 pb-16">
+      <motion.section variants={itemVariants} className="mb-16 max-w-4xl">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-white leading-tight mb-8">
           Labs.
         </h1>
@@ -59,7 +59,7 @@ export default function Labs() {
           Research &amp; Development
         </h2>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-4">
           {projects.experiments.map((project) => (
             <a
               key={project.id}
@@ -86,7 +86,7 @@ export default function Labs() {
           Commercial Products
         </h2>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-4">
           {projects.products.map((project) => (
             <a
               key={project.id}

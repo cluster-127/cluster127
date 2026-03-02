@@ -31,8 +31,8 @@ export default function About() {
       variants={containerVariants}
       initial="hidden"
       animate="show"
-      className="relative z-10 flex-1 flex flex-col px-8 md:px-16 pt-32 pb-16 max-w-4xl">
-      <motion.section variants={itemVariants} className="mb-16">
+      className="relative z-10 flex-1 flex flex-col px-8 md:px-16 pt-32 pb-16">
+      <motion.section variants={itemVariants} className="mb-16 max-w-4xl">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-white leading-tight mb-8">
           About Us
         </h1>
@@ -61,7 +61,7 @@ export default function About() {
       <motion.section variants={itemVariants} className="mb-16">
         <h2 className="text-2xl font-light tracking-tight text-white/50 mb-6">Our Philosophy</h2>
 
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-4">
           <div className="border border-white/10 p-6 hover:border-white/20 transition-colors">
             <h3 className="text-white font-medium mb-2">Determinism Over Chaos</h3>
             <p className="text-white/50 text-sm">
