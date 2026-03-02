@@ -76,7 +76,7 @@ export const PROJECTS = [
     type: 'Security Buffer',
     category: 'products',
     description: 'Deterministic Runtime Security for Modern Applications.',
-    link: '#',
+    link: 'https://tracehoundlabs.com/',
   },
   {
     id: 'blackbox',
@@ -104,64 +104,5 @@ export const PROJECTS = [
     category: 'products',
     description: 'Bid optimization runtime for paid acquisition campaigns',
     link: '#',
-  },
-
-  {
-    id: 'sigil-security',
-    number: '1',
-    name: 'Sigil Security',
-    type: 'Security Primitive',
-    category: 'oss',
-    description: 'A Cryptographic Primitive for the Professional Security Ecosystem.',
-    link: 'https://github.com/laphilosophia/sigil-security',
-  },
-  {
-    id: 'crypthold',
-    number: '2',
-    name: 'Crypthold',
-    type: 'Secure Store',
-    category: 'oss',
-    description:
-      'Secure encrypted config store for Node.js (HKDF, key rotation, lockfile concurrency, atomic writes).',
-    link: 'https://github.com/laphilosophia/crypthold',
-  },
-  {
-    id: 'strime',
-    number: '3',
-    name: 'Strime',
-    type: 'Projection Engine',
-    category: 'oss',
-    description:
-      'Streaming projection engine — extract fields at multi-gigabit speeds with O(1) memory',
-    link: 'https://github.com/laphilosophia/strime',
-  },
-  {
-    id: 'api-tape',
-    number: '4',
-    name: 'API Tape',
-    type: 'Record & Replay',
-    category: 'oss',
-    description:
-      'High-integrity HTTP proxy for deterministic API record & replay. Works everywhere.',
-    link: 'https://github.com/laphilosophia/api-tape',
-  },
-  {
-    id: 'axiom',
-    number: '5',
-    name: 'Axiom',
-    type: 'Document Orchestrator',
-    category: 'oss',
-    description: 'Local-first document lifecycle management application',
-    link: 'https://github.com/laphilosophia/axiom',
-  },
-  {
-    id: 'lexicon',
-    number: '6',
-    name: 'Lexicon',
-    type: 'Decision Engine',
-    category: 'oss',
-    description:
-      'Technical specification and architectural decisions for the decision archaeology platform.',
-    link: 'https://github.com/laphilosophia/lexicon',
   },
 ]
