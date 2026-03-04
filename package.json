@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@libsql/client": "^0.17.0",
     "framer-motion": "^12.26.2",
     "next": "16.1.2",
     "ogl": "^1.0.11",
