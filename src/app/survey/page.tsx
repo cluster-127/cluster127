@@ -1,8 +1,7 @@
 'use client'
 
 import { motion, Variants } from 'framer-motion'
-import { useSearchParams } from 'next/navigation'
-import { FormEvent, Suspense, useEffect, useMemo, useState } from 'react'
+import { FormEvent, useEffect, useState } from 'react'
 
 type YesNo = 'yes' | 'no' | ''
 type IncidentFrequency = '0' | '1' | '2-3' | '4+' | ''
@@ -131,8 +130,8 @@ function validate(form: SurveyForm): string[] {
 }
 
 export default function Survey() {
-  const searchParams = useSearchParams()
   const [form, setForm] = useState<SurveyForm>(initialForm)
+  const [utm, setUtm] = useState({ utmSource: '', utmMedium: '', utmCampaign: '' })
   const [errors, setErrors] = useState<string[]>([])
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitState, setSubmitState] = useState<{
@@ -143,22 +142,21 @@ export default function Survey() {
     message: '',
   })
 
-  const utm = useMemo(
-    () => ({
-      utmSource: searchParams.get('utm_source') ?? '',
-      utmMedium: searchParams.get('utm_medium') ?? '',
-      utmCampaign: searchParams.get('utm_campaign') ?? '',
-    }),
-    [searchParams],
-  )
-
   useEffect(() => {
+    const search = typeof window === 'undefined' ? '' : window.location.search
+    const params = new URLSearchParams(search)
+    const nextUtm = {
+      utmSource: params.get('utm_source') ?? '',
+      utmMedium: params.get('utm_medium') ?? '',
+      utmCampaign: params.get('utm_campaign') ?? '',
+    }
+    setUtm(nextUtm)
     setForm((prev) => ({
       ...prev,
-      ...utm,
+      ...nextUtm,
       sourceUrl: typeof window === 'undefined' ? '' : window.location.href,
     }))
-  }, [utm])
+  }, [])
 
   function updateField<K extends keyof SurveyForm>(key: K, value: SurveyForm[K]) {
     setForm((prev) => ({ ...prev, [key]: value }))
@@ -220,8 +218,7 @@ export default function Survey() {
   }
 
   return (
-    <Suspense fallback={<>...</>}>
-      <motion.div
+    <motion.div
         variants={containerVariants}
         initial="hidden"
         animate="show"
@@ -539,6 +536,5 @@ export default function Survey() {
           </p>
         </motion.section>
       </motion.div>
-    </Suspense>
   )
 }
