@@ -33,32 +33,29 @@ export default function Home() {
         variants={containerVariants}
         initial="hidden"
         animate="show"
-        className="relative z-10 flex flex-col gap-6 md:gap-12 p-8 md:p-16 pointer-events-none select-none">
+        className="relative z-10 flex flex-col gap-6 md:gap-8 p-8 md:p-16 pointer-events-none select-none">
         <h1 className="text-4xl md:text-5xl lg:text-7xl font-light text-white/50 leading-tight text-center md:text-left">
-          We give machines
-          <br />
-          <span className="text-white"> the wisdom to feel.</span>
+          High-end technology with <br />
+          <span className="text-white"> a human touch.</span>
         </h1>
 
-        <div className="flex flex-col gap-2 md:max-w-3xl">
+        <div className="flex flex-col gap-2 md:max-w-6xl">
           <p className="text-lg md:text-xl font-light text-white/50 leading-relaxed tracking-wider text-center md:text-left w-full md:w-fit">
-            Information is not data, information is living, dying, feeling data.
-          </p>
-          <p className="text-base md:text-lg font-light text-white/40 leading-relaxed tracking-wider text-center md:text-left w-full md:w-fit">
-            We build deterministic physics engines for distributed systems. <br />
-            Our stack models software as living organisms — with reflexes, memory, and the wisdom to
-            forget.
+            We are a team of passionate individuals dedicated to creating innovative solutions that
+            blend cutting-edge technology with a human-centered approach. Our mission is to empower
+            businesses and individuals alike by providing high-quality products and services that
+            enhance everyday life.
           </p>
         </div>
       </motion.section>
 
       <FloatingLines
         enabledWaves={['top', 'middle', 'bottom']}
-        middleWavePosition={{ x: 0.5, y: 0.5, rotate: 0.1 }}
-        lineCount={4}
-        lineDistance={24}
-        bendRadius={24}
-        bendStrength={12}
+        middleWavePosition={{ x: 0.5, y: 0.35, rotate: 0.5 }}
+        lineCount={6}
+        lineDistance={48}
+        bendRadius={48}
+        bendStrength={24}
         interactive={false}
         parallax={true}
       />

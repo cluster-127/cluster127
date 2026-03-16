@@ -79,7 +79,7 @@ export default function FloatingLines({
   mouseDamping = 0.05,
   parallax = true,
   parallaxStrength = 0.2,
-  mixBlendMode = 'screen',
+  mixBlendMode = 'overlay',
 }: FloatingLinesProps) {
   const containerRef = useRef<HTMLDivElement | null>(null)
   const targetMouseRef = useRef<Vector2>(new Vector2(-1000, -1000))

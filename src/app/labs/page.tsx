@@ -65,8 +65,8 @@ export default function Labs() {
               key={project.id}
               href={project.link}
               target="_blank"
-              className="relative overflow-hidden border border-white/10 py-6 pl-10 pr-6 hover:border-white/20 transition-colors">
-              <figure className="absolute -left-1.5 -top-3 text-7xl font-light text-white/10">
+              className="relative overflow-hidden py-6 pl-10 pr-6 border-b border-white/10">
+              <figure className="absolute -left-1.5 -bottom-3 text-7xl font-light text-white/10">
                 {project.number}
               </figure>
               <aside className="flex flex-col gap-1 flex-1">
@@ -92,8 +92,8 @@ export default function Labs() {
               key={project.id}
               href={project.link}
               target="_blank"
-              className="relative overflow-hidden border border-white/10 py-6 pl-10 pr-6 hover:border-white/20 transition-colors">
-              <figure className="absolute -left-1.5 -top-3 text-7xl font-light text-white/10">
+              className="relative overflow-hidden py-6 pl-10 pr-6 border-b border-white/10">
+              <figure className="absolute -left-1.5 -bottom-3 text-7xl font-light text-white/10">
                 {project.number}
               </figure>
               <aside className="flex flex-col gap-1">
